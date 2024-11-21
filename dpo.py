@@ -68,6 +68,9 @@ if __name__ == "__main__":
     parser = TrlParser((ScriptArguments, DPOConfig, ModelConfig))
     script_args, training_args, model_config = parser.parse_args_and_config()
 
+    training_args.optim = 'paged_adamw_8bit'
+    training_args.save_only_model = True
+
     ################
     # Model & Tokenizer
     ###################

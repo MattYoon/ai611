@@ -1,5 +1,5 @@
 python dpo.py \
-    --dataset_name DKYoon/seahorse4dpo-100 \
+    --dataset_name Joocjun/seahorse4dpo \
     --model_name_or_path google/gemma-2-2b-it \
     --learning_rate 5e-7 \
     --num_train_epochs 1 \
@@ -13,6 +13,5 @@ python dpo.py \
     --bf16 true \
     --attn_implementation flash_attention_2 \
     --use_liger_kernel \
-
-    # --report_to wandb \
-    # --run_name gemma-2-2b-it-seahorse4dpo \
+    --report_to wandb \
+    --run_name gemma-2-2b-it-seahorse4dpo \
